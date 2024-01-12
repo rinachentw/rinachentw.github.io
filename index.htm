@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting to The Top of Japan</title>
+    <!--置入套件專用JS-->
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;700&display=swap');
+
+    html {
+        scroll-behavior: smooth; /*點按鈕後頁面滾動的方式*/
+    }
+
+    * {box-sizing: border-box;} /*無敵星星*/
+    body {
+        font-family: 'Anton', sans-serif;
+        background-color: hsl(20, 33%, 98%);
+    }
+
+    body, h1, h2, h3, p, ul {
+        margin: 0;
+    }
+
+.wrap {
+      width: 1000px;
+      margin-inline: auto;
+
+}
+section {
+    font-size: 30px;
+    width: 100%;
+    background-color: hsl(0, 0%, 100%);
+    height: 690px ;
+    margin-top: 5px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+section p {
+        font-size: 30px;
+        line-height: 160%;
+    }
+
+h2 {
+    color: hsl(0, 0%, 3%);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+}
+header {
+    height: 100px;
+    display: flex; /*水平排列*/
+    align-items: center; /*logo跟menu上下居中*/
+    padding-inline: 25px;
+    border-radius: 10px;
+    background-color: hsl(140, 2%, 32%);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top:0.5px;
+    z-index: 9999;
+}
+header h1.logo {
+    margin-right: auto; /*撐開logo跟menu中間的距離*/
+}
+header a {
+    color: rgb(249, 254, 254);
+    text-decoration: none;
+    display: block;
+}
+.menu ul {
+    display: flex;  /*讓選單也橫排*/
+    gap: 10px;
+    list-style: none; /*讓選單點點不見*/
+    
+}
+.menu a {
+    font-size: 30px;
+    padding: 6px 16px;
+    background-color: hsl(140, 2%, 32%);
+    border-radius: 20px;
+}
+.menu a:hover {
+    color: #364925;
+    background-color: #adafab;
+}
+a.anchor {
+    display: block;
+    position: relative;
+    top: -950px;
+    visibility: hidden;
+}
+
+main {
+        width: 1000px;
+        height: 650px;
+        margin: 0 auto;/*居中*/
+        position: relative;/*讓 layer 參考定位用*/
+    }
+    h1.layer {
+        color: hsl(0, 14%, 96%);
+        font-size: 70px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        margin: 0;/*清除 H1 的預設 margin*/
+        position: absolute;/*用絕對定位*/
+        top: 40px; left: 50px;/*設定位置*/
+        z-index: 7777;/*確保讓它疊在 Slider 上*/
+           }
+    div.bxslider {
+        /*撐空間用的，假裝是 Slider*/
+        width: 1000px;
+        height: 600px;
+    }
+
+
+a.top {
+      display:block;
+      width: 60px; height: 60px;
+      border-radius: 30px;
+      color: #090909;
+      text-decoration: none;
+      background-color: hsl(137, 19%, 93%);
+       /*設定flex讓文字居中*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /*設定定位讓它固定在畫面右下角*/
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+ }
+ a.top:hover {
+        background-color: #93988d;
+    }
+a.anchor   {
+    display: block;
+    position: relative;/*利用 position 來改變座標位置*/
+    top: -130px;/*讓定位點網上位移，避免 header 遮住標題*/
+    visibility: hidden;/*把定位點設定為隱藏以避免被看到*/
+    }
+ footer p {
+    height: 60px;
+    text-align: center;
+    
+ }
+</style>
+</head>
+
+<body>
+    <div class="wrap">
+        <a href="#" class="top">top</a> 
+        <header>
+            <h1 class="logo">
+                <a href="#"><img src="image/logo.png"></a>
+            </h1>
+            <nav class="menu">
+            <ul>
+                <li><a href="#Route">Route</a></li>
+                <li><a href="#Accommadation">Accommadation</a></li>
+                <li><a href="#Souvenir">Souvenir</a></li>
+            </ul>
+            </nav>
+
+        </header>
+
+<!-- 用一個大筐把兩個區塊包起來  -->
+        <main>
+        <!-- 這一層放標題 -->
+        <h1 class="layer">Getting to the<br>Top of Japan</h1>
+        <!-- 這一層放原本的 Slider，內容省略 -->
+        <div class="bxslider">
+            <div><img src="image/001.jpg"></div>
+            <div><img src="image/002.jpg"></div>
+            <div><img src="image/003.jpg"></div>
+            <div><img src="image/004.jpg"></div>
+            <div><img src="image/005.jpg"></div>
+            <div><img src="image/006.jpg"></div>
+          </div>
+        </main>
+
+    <a class="anchor" id="Route"></a> <!-- 定位點 -->
+    <section>
+    <h2>Route</h2>
+    <div><img src="image/r.jpg"></div>
+    </section>
+
+    
+    <a class="anchor" id="Accommadation"></a> <!-- 定位點 -->
+    <section>
+    <h2>Accommadation</h2>
+    <div><img src="image/a.jpg"></div>
+    </section>
+
+
+    <a class="anchor" id="Souvenir"></a> <!-- 定位點 -->
+    <section>
+    <h2>Souvenir</h2>
+    <div><img src="image/s.jpg"></div>
+    </section>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!--置入套件專用 JavaScript-->
+<script src="js/jquery.bxslider.js"></script>
+<!--設定相關環境參數-->
+<script type="text/javascript">
+$('.bxslider').bxSlider({
+  auto: true, //自動播放
+  stopAutoOnClick: true, //滑鼠點選時停止播放
+  pager: true, //顯示下方圓點
+  slideWidth: 1200 //圖片寬度(像素)
+});
+</script>
+<footer>
+    <br/>
+    <br/>
+    <p>Copyright 2024 Getting To The Top. All Rights Reserved</p>
+   
+   </footer>
+</html>
